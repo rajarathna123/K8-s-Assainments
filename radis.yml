@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: test
+  name: messaging-pod
+  labels: 
+    tier: msg
+spec:
+  ports:
+  - port: 6379
+  selector:
+    tier: msg
+
+
+

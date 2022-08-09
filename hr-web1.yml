@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  namespace: test
+  name: hr-web-app-service
+spec:
+  type: NodePort
+  selector:
+    app: myapp
+  ports:
+    -nodePort: 30082
+    port: 8080
+    targetPort: 80
